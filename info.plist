@@ -325,9 +325,10 @@
 		</dict>
 	</dict>
 	<key>name</key>
-	<string>SASS</string>
+	<string>Sass</string>
 	<key>ordering</key>
 	<array>
+		<string>5A998214-23DB-4482-927C-D02A57C78ACF</string>
 		<string>0AB51F6F-7780-4BF2-BEE3-5405ABA6A6B9</string>
 		<string>E2CC7D28-9F0B-4BBB-ACE0-E67682DF3889</string>
 		<string>15DB6DEF-1236-4781-AC58-D5D7B8A76727</string>
