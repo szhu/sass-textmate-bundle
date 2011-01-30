@@ -3,7 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>fileTypes</key>
-	<array/>
+	<array>
+		<string>sass</string>
+		<string>scss</string>
+	</array>
 	<key>foldingStartMarker</key>
 	<string>/\*|^#|^\*|^\b|^\.</string>
 	<key>foldingStopMarker</key>
@@ -16,15 +19,28 @@
 	<array>
 		<dict>
 			<key>match</key>
-			<string>\b(a|abbr|acronym|address|area|article|aside|audio|b|base|big|blockquote|body|br|button|canvas|caption|cite|code|col|colgroup|command|datalist|dd|del|details|dfn|div|dl|dt|em|embed|fieldset|figcaption|figure|footer|form|frame|frameset|(h[1-6])|head|header|hgroup|hr|html|i|iframe|img|input|ins|kbd|keygen|label|legend|li|link|map|mark|meta|meter|nav|noframes|noscript|object|ol|optgroup|option|output|p|param|pre|progress|q|rp|rt|ruby|samp|script|section|select|small|span|strike|strong|style|sub|sup|table|tbody|td|textarea|tfoot|th|thead|time|title|tr|tt|ul|var|video)\b</string>
+			<string>\b(a|abbr|acronym|address|area|article|aside|audio|b|base|big|blockquote|body|br|button|canvas|caption|cite|code|col|colgroup|command|datalist|dd|del|details|dfn|div|dl|dt|em|embed|fieldset|figcaption|figure|footer|form|frame|frameset|(h[1-6])|head|header|hgroup|hr|html|i|iframe|img|input|ins|kbd|keygen|label|legend|li|link|map|mark|meta|meter|nav|noframes|noscript|object|ol|optgroup|option|output|p|param|pre|progress|q|rp|rt|ruby|samp|script|section|select|small|span|strike|strong|sub|sup|table|tbody|td|textarea|tfoot|th|thead|time|title|tr|tt|ul|var|video)\b</string>
 			<key>name</key>
 			<string>keyword.control.untitled</string>
 		</dict>
 		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.function.sass</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.sass</string>
+				</dict>
+			</dict>
 			<key>match</key>
-			<string>@(import|mixin|include|charset|import|media|page|font-face|namespace) [\/\.\w-]*\b</string>
+			<string>@(import|mixin|include|charset|media|page|font-face|namespace)\s+([[a-zA-Z_$]\w*-]*)?</string>
 			<key>name</key>
-			<string>keyword.control.at-rule.sass</string>
+			<string>meta.function-call.sass</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -37,7 +53,7 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>\\.</string>
+					<string>\\\w*</string>
 					<key>name</key>
 					<string>constant.character.escaped.sass</string>
 				</dict>
@@ -65,7 +81,7 @@
 			<key>match</key>
 			<string>[!\$][a-zA-Z0-9_-]+</string>
 			<key>name</key>
-			<string>variable.parameter.sass</string>
+			<string>meta.constructor.argument.css</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -85,9 +101,9 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\+[-\w]+</string>
+			<string>(\+|=)[-\w]+</string>
 			<key>name</key>
-			<string>entity.other.attribute-name.tag.pseudo-class</string>
+			<string>entity.name.function.sass</string>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -113,29 +129,35 @@
 			<key>end</key>
 			<string>\)</string>
 			<key>name</key>
-			<string>variable.parameter.url</string>
+			<string>string.quoted.sass</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>&amp;</string>
 			<key>name</key>
-			<string>keyword.control.untitled</string>
+			<string>markup.heading.sass</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>:(before|after|first-child|last-child|first-line|first-letter|link|focus|lang|hover|active|visited)</string>
+			<string>:(active|hover|link|visited|focus|:-webkit-input-placeholder|-moz-placeholder)</string>
 			<key>name</key>
-			<string>entity.other.attribute-name.tag.pseudo-class</string>
+			<string>entity.other.attribute-name.pseudo-class.sass</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(azimuth|background-attachment|background-color|background-image|background-position|background-repeat|background|border-bottom-color|border-bottom-style|border-bottom-width|border-bottom|border-collapse|border-color|border-left-color|border-left-style|border-left-width|border-left|border-right-color|border-right-style|border-right-width|border-right|border-spacing|border-style|border-top-color|border-top-style|border-top-width|border-top|border-width|border|bottom|caption-side|clear|clip|color|content|counter-increment|counter-reset|cue-after|cue-before|cue|cursor|direction|display|elevation|empty-cells|float|font-family|font-size-adjust|font-size|font-stretch|font-style|font-variant|font-weight|font|height|left|letter-spacing|line-height|list-style-image|list-style-position|list-style-type|list-style|margin-bottom|margin-left|margin-right|margin-top|marker-offset|margin|marks|max-height|max-width|min-height|min-width|-moz-border-radius|orphans|outline-color|outline-style|outline-width|outline|overflow|padding-bottom|padding-left|padding-right|padding-top|padding|page-break-after|page-break-before|page-break-inside|page|pause-after|pause-before|pause|pitch-range|pitch|play-during|position|quotes|richness|right|size|speak-header|speak-numeral|speak-punctuation|speech-rate|speak|stress|table-layout|text-align|text-decoration|text-indent|text-shadow|text-transform|top|unicode-bidi|vertical-align|visibility|voice-family|volume|white-space|widows|width|word-spacing|z-index)\b</string>
+			<string>:(after|before|first-child|first-letter|first-line|last-child|lang|selection)</string>
+			<key>name</key>
+			<string>entity.other.attribute-name.pseudo-element.sass</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(align|azimuth|background-attachment|background-color|background-image|background-position|background-repeat|background|border-bottom-color|border-bottom-style|border-bottom-width|border-bottom|border-collapse|border-color|border-left-color|border-left-style|border-left-width|border-left|border-right-color|border-right-style|border-right-width|border-right|border-spacing|border-style|border-top-color|border-top-style|border-top-width|border-top|border-width|border-radius|border|bottom|box-shadow|caption-side|clear|clip|color|content|counter-increment|counter-reset|cue-after|cue-before|cue|cursor|decoration|direction|display|elevation|empty-cells|float|font-family|font-size-adjust|font-size|font-stretch|font-style|font-variant|font-weight|font|height|image|indent|left|letter-spacing|line-height|list-style-image|list-style-position|list-style-type|list-style|margin-bottom|margin-left|margin-right|margin-top|marker-offset|margin|marks|max-height|max-width|min-height|min-width|-moz-border-radius|orphans|outline-color|outline-style|outline-width|outline|overflow|padding-bottom|padding-left|padding-right|padding-top|padding|page-break-after|page-break-before|page-break-inside|page|pause-after|pause-before|pause|pitch-range|pitch|play-during|position|quotes|repeat|richness|right|shadow|size|speak-header|speak-numeral|speak-punctuation|speech-rate|speak|stress|style|table-layout|text|text-align|text-decoration|text-indent|text-shadow|text-transform|top|transform|unicode-bidi|vertical-align|visibility|voice-family|volume|weight|white-space|widows|width|word-spacing|z-index|moz-appearance|moz-border-radius|moz-box-shadow|webkit-appearance|webkit-border-radius|webkit-box-shadow)\b</string>
 			<key>name</key>
 			<string>support.type.property-name.sass</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(absolute|all-scroll|always|auto|baseline|below|bidi-override|block|bold|bolder|both|bottom|break-all|break-word|capitalize|center|char|circle|col-resize|collapse|crosshair|dashed|decimal|default|disabled|disc|distribute-all-lines|distribute-letter|distribute-space|distribute|dotted|double|e-resize|ellipsis|fixed|groove|hand|help|hidden|horizontal|ideograph-alpha|ideograph-numeric|ideograph-parenthesis|ideograph-space|inactive|inherit|inline-block|inline|inset|inside|inter-ideograph|inter-word|italic|justify|keep-all|left|lighter|line-edge|line-through|line|list-item|loose|lower-alpha|lower-roman|lowercase|lr-tb|ltr|medium|middle|move|n-resize|ne-resize|newspaper|no-drop|no-repeat|nw-resize|none|normal|not-allowed|nowrap|oblique|outset|outside|overline|pointer|progress|relative|repeat-x|repeat-y|repeat|right|ridge|row-resize|rtl|s-resize|scroll|se-resize|separate|small-caps|solid|square|static|strict|super|sw-resize|table-footer-group|table-header-group|tb-rl|text-bottom|text-top|text|thick|thin|top|transparent|underline|upper-alpha|upper-roman|uppercase|vertical-ideographic|vertical-text|visible|w-resize|wait|whitespace)\b</string>
+			<string>\b(absolute|all-scroll|always|auto|baseline|below|bidi-override|block|bold|bolder|both|bottom|break-all|break-word|capitalize|center|char|circle|col-resize|collapse|crosshair|dashed|decimal|default|disabled|disc|distribute-all-lines|distribute-letter|distribute-space|distribute|dotted|double|e-resize|ellipsis|fixed|groove|hand|help|hidden|horizontal|ideograph-alpha|ideograph-numeric|ideograph-parenthesis|ideograph-space|inactive|inherit|inline-block|inline|inset|inside|inter-ideograph|inter-word|italic|justify|keep-all|left|lighter|line-edge|line-through|line|list-item|loose|lower-alpha|lower-roman|lowercase|lr-tb|ltr|medium|middle|move|n-resize|ne-resize|newspaper|no-drop|no-repeat|nw-resize|none|normal|not-allowed|nowrap|oblique|outset|outside|overline|pointer|progress|relative|repeat-x|repeat-y|repeat|rgba|right|ridge|row-resize|rtl|s-resize|scroll|se-resize|separate|small-caps|solid|square|static|strict|super|sw-resize|table-footer-group|table-header-group|tb-rl|text-bottom|text-top|text|thick|thin|top|transparent|underline|upper-alpha|upper-roman|uppercase|vertical-ideographic|vertical-text|visible|w-resize|wait|whitespace)\b</string>
 			<key>name</key>
 			<string>support.constant.property-value.sass</string>
 		</dict>
