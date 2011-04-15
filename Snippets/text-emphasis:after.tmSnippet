@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>text-emphasis:${TM_CSS_SPACE}after$0</string>
+	<string>text-emphasis: ${TM_CSS_SPACE}after$0</string>
 	<key>name</key>
 	<string>text-emphasis:after</string>
 	<key>scope</key>

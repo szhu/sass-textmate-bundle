@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>@media ${1:print} {
+	<string>@media ${1: print} {
 	$0
 	}</string>
 	<key>name</key>

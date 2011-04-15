@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>table-layout:${TM_CSS_SPACE}auto$0</string>
+	<string>table-layout: ${TM_CSS_SPACE}auto$0</string>
 	<key>name</key>
 	<string>table-layout:auto</string>
 	<key>scope</key>

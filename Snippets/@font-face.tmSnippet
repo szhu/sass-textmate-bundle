@@ -4,8 +4,8 @@
 <dict>
 	<key>content</key>
 	<string>@font-face {
-	font-family:$1
-	src:url($2)$0
+	font-family: $1
+	src: url($2)$0
 	}</string>
 	<key>name</key>
 	<string>@font-face</string>

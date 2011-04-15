@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>border-image:${TM_CSS_SPACE}url($1) ${2:0} ${3:0} ${4:0} ${5:0} ${6:stretch} ${7:stretch}$0</string>
+	<string>border-image: ${TM_CSS_SPACE}url($1) ${2: 0} ${3: 0} ${4: 0} ${5: 0} ${6: stretch} ${7: stretch}$0</string>
 	<key>name</key>
 	<string>border-image</string>
 	<key>scope</key>

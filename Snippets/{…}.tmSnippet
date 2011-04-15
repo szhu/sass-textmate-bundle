@@ -3,12 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string> {
-	$0
-	}</string>
+	<string>
+	$0</string>
 	<key>keyEquivalent</key>
-	<string>@
-</string>
+	<string>@</string>
 	<key>name</key>
 	<string>{…}</string>
 	<key>scope</key>

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>border-top-right-image:${TM_CSS_SPACE}continue$0</string>
+	<string>border-top-right-image: ${TM_CSS_SPACE}continue$0</string>
 	<key>name</key>
 	<string>border-top-right-image:continue</string>
 	<key>scope</key>

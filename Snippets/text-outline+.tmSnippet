@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>text-outline:${TM_CSS_SPACE}${1:0} ${2:0} #${3:000}$0</string>
+	<string>text-outline: ${TM_CSS_SPACE}${1: 0} ${2: 0} #${3: 000}$0</string>
 	<key>name</key>
 	<string>text-outline+</string>
 	<key>scope</key>
