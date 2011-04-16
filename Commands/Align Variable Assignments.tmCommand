@@ -7,9 +7,9 @@
 	<key>command</key>
 	<string>#!/usr/bin/env ruby
 #
-# Sass variable block tidier, version 0.1.
+# Sass variable block tidier, version 0.2.
 #
-# Copyright Nathan Henderson 2010
+# Copyright Nathan Henderson 2010-2011
 # based on Assignment block tidier, version 0.1. by Chris Poirier 2006.
 #
 # This script can be used as a command for TextMate to align all 
@@ -87,10 +87,10 @@ end
 
 #
 # Now, iterate over the block and find the best column number
-# for the = sign.  The pattern will tell us the position of the
-# first bit of whitespace before the equal sign.  We put the
-# equals sign to the right of the furthest-right one.  Note that
-# we cannot assume every line in the block is relevant.
+# for the colon.  The pattern will tell us the position of the
+# first bit of whitespace before the colon.  We put the colon
+# to the right of the furthest-right one.  Note that we cannot
+# assume every line in the block is relevant.
 
 best_column = 0
 block_top.upto(block_bottom) do |number|
