@@ -8,12 +8,12 @@
 	<string>/* $1
 ---------------------------------------- */
 </string>
-	<key>keyEquivalent</key>
-	<string>~@/</string>
 	<key>name</key>
 	<string>---</string>
 	<key>scope</key>
 	<string>source.sass</string>
+	<key>tabTrigger</key>
+	<string>---</string>
 	<key>uuid</key>
 	<string>F81D1BB3-0686-4A05-B387-471171D5C241
 </string>
