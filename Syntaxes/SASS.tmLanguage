@@ -183,7 +183,7 @@
 			<key>end</key>
 			<string>\)</string>
 			<key>name</key>
-			<string>name</string>
+			<string>constant</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -259,14 +259,6 @@
 			<string>(?&lt;=[\d])(px|pt|cm|mm|in|em|ex|pc)\b|%</string>
 			<key>name</key>
 			<string>constant.other.unit.sass</string>
-		</dict>
-		<dict>
-			<key>begin</key>
-			<string>url</string>
-			<key>end</key>
-			<string>\)</string>
-			<key>name</key>
-			<string>variable.parameter.url</string>
 		</dict>
 		<dict>
 			<key>match</key>
