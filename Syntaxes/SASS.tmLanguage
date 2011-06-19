@@ -16,11 +16,11 @@
 	<array>
 		<dict>
             <key>begin</key>
-            <string>\b[\w-]+\(\b</string>
+            <string>\b[\w-]+\(</string>
             <key>end</key>
             <string>\)</string>
             <key>name</key>
-            <string>entity.name.function</string>
+            <string>entity</string>
 			<key>patterns</key>
             <array>
                 <dict>
@@ -60,6 +60,12 @@
                     <string>true|false</string>
                     <key>name</key>
                     <string>constant</string>
+                </dict>
+                <dict>
+                    <key>match</key>
+                    <string>[!\$][a-zA-Z0-9_-]+</string>
+                    <key>name</key>
+                    <string>variable.parameter.sass</string>
                 </dict>
             </array>
 		</dict>
