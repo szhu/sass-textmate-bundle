@@ -15,6 +15,55 @@
 	<key>patterns</key>
 	<array>
 		<dict>
+            <key>begin</key>
+            <string>\b[\w-]+\(\b</string>
+            <key>end</key>
+            <string>\)</string>
+            <key>name</key>
+            <string>entity.name.function</string>
+			<key>patterns</key>
+            <array>
+                <dict>
+                    <key>begin</key>
+                    <string>["']</string>
+                    <key>end</key>
+                    <string>["']</string>
+                    <key>name</key>
+                    <string>string</string>
+                </dict>
+                <dict>
+                    <key>match</key>
+                    <string>(?&lt;=[\d])(px|pt|cm|mm|in|em|ex|pc)\b|%</string>
+                    <key>name</key>
+                    <string>constant.other.unit.sass</string>
+                </dict>
+                <dict>
+                    <key>match</key>
+                    <string>(#)([0-9a-fA-F]{3}|[0-9a-fA-F]{6})\b(?!\-)</string>
+                    <key>name</key>
+                    <string>constant.other.rgb-value.sass</string>
+                </dict>
+                <dict>
+                    <key>match</key>
+                    <string>(-|\+)?\s*[0-9]+(\.[0-9]+)?|(\.)?\d</string>
+                    <key>name</key>
+                    <string>constant.numeric.sass</string>
+                </dict>
+                <dict>
+                    <key>match</key>
+                    <string>,</string>
+                    <key>name</key>
+                    <string>source</string>
+                </dict>
+                <dict>
+                    <key>match</key>
+                    <string>true|false</string>
+                    <key>name</key>
+                    <string>constant</string>
+                </dict>
+            </array>
+		</dict>
+		<dict>
 			<key>match</key>
 			<string>\b(a|abbr|acronym|address|area|article|aside|audio|b|base|big|blockquote|body|br|button|canvas|caption|cite|code|col|colgroup|command|datalist|dd|del|details|dfn|div|dl|dt|em|embed|fieldset|figcaption|figure|footer|form|frame|frameset|(h[1-6])|head|header|hgroup|hr|html|i|iframe|img|input|ins|kbd|keygen|label|legend|li|link|map|mark|meta|meter|nav|noframes|noscript|object|ol|optgroup|option|output|p|param|pre|progress|q|rp|rt|ruby|samp|script|section|select|small|span|strike|strong|style|sub|sup|table|tbody|td|textarea|tfoot|th|thead|time|title|tr|tt|ul|var|video)\b</string>
 			<key>name</key>
@@ -28,9 +77,94 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>"</string>
+			<string>@(import|mixin|include|charset|import|media|page|font-face|namespace)</string>
 			<key>end</key>
-			<string>"</string>
+			<string>[\n\r]</string>
+			<key>name</key>
+			<string>keyword.control.at-rule.sass</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>begin</key>
+					<string>["']</string>
+					<key>end</key>
+					<string>["']</string>
+					<key>name</key>
+					<string>string</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>;</string>
+					<key>name</key>
+					<string>source</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+            <key>begin</key>
+            <string>(?&lt;!\w)\+[\w-]+</string>
+            <key>end</key>
+            <string>[\n\r]</string>
+            <key>name</key>
+            <string>keyword.control.at-rule.sass</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>begin</key>
+					<string>\(</string>
+					<key>end</key>
+					<string>\)</string>
+					<key>name</key>
+					<string>keyword.control.at-rule.sass</string>
+					<key>patterns</key>
+					<array>
+                        <dict>
+                            <key>begin</key>
+                            <string>["']</string>
+                            <key>end</key>
+                            <string>["']</string>
+                            <key>name</key>
+                            <string>string</string>
+                        </dict>
+                        <dict>
+                            <key>match</key>
+                            <string>(?&lt;=[\d])(px|pt|cm|mm|in|em|ex|pc)\b|%</string>
+                            <key>name</key>
+                            <string>constant.other.unit.sass</string>
+                        </dict>
+                        <dict>
+                            <key>match</key>
+                            <string>(#)([0-9a-fA-F]{3}|[0-9a-fA-F]{6})\b(?!\-)</string>
+                            <key>name</key>
+                            <string>constant.other.rgb-value.sass</string>
+                        </dict>
+                        <dict>
+                            <key>match</key>
+                            <string>(-|\+)?\s*[0-9]+(\.[0-9]+)?|\.\d</string>
+                            <key>name</key>
+                            <string>constant.numeric.sass</string>
+                        </dict>
+                        <dict>
+                            <key>match</key>
+                            <string>,</string>
+                            <key>name</key>
+                            <string>source</string>
+                        </dict>
+                        <dict>
+                            <key>match</key>
+                            <string>true|false</string>
+                            <key>name</key>
+                            <string>constant</string>
+                        </dict>
+					</array>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>['"]</string>
+			<key>end</key>
+			<string>['"]</string>
 			<key>name</key>
 			<string>string</string>
 			<key>patterns</key>
@@ -44,6 +178,25 @@
 			</array>
 		</dict>
 		<dict>
+			<key>begin</key>
+			<string>url\(</string>
+			<key>end</key>
+			<string>\)</string>
+			<key>name</key>
+			<string>name</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>begin</key>
+					<string>['"]</string>
+					<key>end</key>
+					<string>['"]</string>
+					<key>name</key>
+					<string>string</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
 			<key>match</key>
 			<string>\.[a-zA-Z0-9_-]+</string>
 			<key>name</key>
@@ -51,7 +204,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(#)([0-9a-fA-F]{3}|[0-9a-fA-F]{6})\b</string>
+			<string>(#)([0-9a-fA-F]{3}|[0-9a-fA-F]{6})\b(?!\-)</string>
 			<key>name</key>
 			<string>constant.other.rgb-value.sass</string>
 		</dict>
@@ -85,7 +238,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\+[-\w]+</string>
+			<string>\:[-\w\(\)]+</string>
 			<key>name</key>
 			<string>entity.other.attribute-name.tag.pseudo-class</string>
 		</dict>
