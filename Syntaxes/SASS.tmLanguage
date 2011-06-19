@@ -183,7 +183,7 @@
 			<key>end</key>
 			<string>\)</string>
 			<key>name</key>
-			<string>constant</string>
+			<string>variable.parameter.url</string>
 			<key>patterns</key>
 			<array>
 				<dict>
