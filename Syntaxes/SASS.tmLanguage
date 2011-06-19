@@ -20,7 +20,7 @@
             <key>end</key>
             <string>\)</string>
             <key>name</key>
-            <string>entity</string>
+            <string>entity.name.function</string>
 			<key>patterns</key>
             <array>
                 <dict>
@@ -65,7 +65,7 @@
                     <key>match</key>
                     <string>[!\$][a-zA-Z0-9_-]+</string>
                     <key>name</key>
-                    <string>variable.parameter.sass</string>
+                    <string>variable.language</string>
                 </dict>
             </array>
 		</dict>
@@ -224,7 +224,7 @@
 			<key>match</key>
 			<string>[!\$][a-zA-Z0-9_-]+</string>
 			<key>name</key>
-			<string>variable.parameter.sass</string>
+			<string>variable.language</string>
 		</dict>
 		<dict>
 			<key>begin</key>
