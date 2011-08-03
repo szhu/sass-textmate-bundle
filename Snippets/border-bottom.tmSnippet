@@ -3,7 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>border-bottom: ${TM_CSS_SPACE}$1$0</string>
+	<string>border-top-color: \$${2:sass_color}
+</string>
 	<key>name</key>
 	<string>border-bottom</string>
 	<key>scope</key>
