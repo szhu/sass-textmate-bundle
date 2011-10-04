@@ -15,9 +15,19 @@ For those of you how prefer the alternative Sass Synatx:
 
 ### INSTALLATION
 
+#### With git
+
 * `mkdir -p ~/Library/Application\ Support/TextMate/Bundles/`
 * `cd ~/Library/Application\ Support/TextMate/Bundles/`
 * `git clone https://github.com/chrisledet/sass-bundle.git Sass.tmbundle`
+* `osascript -e 'tell app "TextMate" to reload bundles'`
+
+#### Without git
+* `mkdir -p ~/Library/Application\ Support/TextMate/Bundles`
+* `cd ~/Library/Application\ Support/TextMate/Bundles`
+* `wget https://github.com/downloads/chrisledet/sass-bundle/Sass.tmbundle.tar.gz`
+* `tar zxvf Sass.tmbundle.tar.gz`
+* `rm Sass.tmbundle.tar.gz`
 * `osascript -e 'tell app "TextMate" to reload bundles'`
 
 ### About
