@@ -13,7 +13,7 @@ For those of you how prefer the alternative Sass Synatx:
       a 
         margin: 0 1px 0 1px
 
-### INSTALLATION
+### Installation
 
 #### With git
 
@@ -34,5 +34,5 @@ For those of you how prefer the alternative Sass Synatx:
 I couldn't find a decent bundle that's updated regularly so I forked this and decided to 
 maintain one for myself. Others should feel free to submit patches or whatever.
 
-### CREDIT
+### Credit
 This bundle was not created by me. It is a fork of <https://github.com/seaofclouds/sass-textmate-bundle>.
