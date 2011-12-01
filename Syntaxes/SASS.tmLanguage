@@ -87,7 +87,7 @@
 			<key>begin</key>
 			<string>( *)(/\*|//)</string>
 			<key>end</key>
-			<string>^(?=\1[^ ])</string>
+			<string>\*/</string>
 			<key>name</key>
 			<string>comment.block.sass</string>
 		</dict>
