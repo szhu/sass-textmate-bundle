@@ -1,4 +1,4 @@
-# Sass for Textmate/Sublime Text 2
+# Sass for TextMate/Sublime Text 2
 
 ## TextMate Installation
 
