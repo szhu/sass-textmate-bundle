@@ -1,38 +1,21 @@
-### Textmate with alternative SASS Syntax
+# Sass for Textmate/Sublime Text 2
 
-For those of you how prefer the alternative Sass Synatx:
+## TextMate Installation
 
-    .pagination
-      margin: 10px 0 10px 0
-      text-align: center
-      font-size: 14px
-      span
-        color: #000
-      span.disabled
-        display: none
-      a 
-        margin: 0 1px 0 1px
-
-### Installation
-
-#### With git
+### With git
 
     mkdir -p ~/Library/Application\ Support/TextMate/Bundles/
     cd ~/Library/Application\ Support/TextMate/Bundles/
-    git clone https://github.com/chrisledet/sass-bundle.git Sass.tmbundle
+    git clone https://github.com/nathos/sass-textmate-bundle.git Sass.tmbundle
     osascript -e 'tell app "TextMate" to reload bundles'
 
-#### Without git
+### Without git
     mkdir -p ~/Library/Application\ Support/TextMate/Bundles
     cd ~/Library/Application\ Support/TextMate/Bundles
-    wget https://github.com/downloads/chrisledet/sass-bundle/Sass.tmbundle.tar.gz
-    tar zxvf Sass.tmbundle.tar.gz
-    rm Sass.tmbundle.tar.gz
+    mkdir sass-textmate-bundle.tmbundle && curl -L https://github.com/nathos/sass-textmate-bundle/tarball/master | tar xz --strip 1 -C sass-textmate-bundle.tmbundle
     osascript -e 'tell app "TextMate" to reload bundles'
 
-### About
-I couldn't find a decent bundle that's updated regularly so I forked this and decided to 
-maintain one for myself. Others should feel free to submit patches or whatever.
+## About & Credit
+This was originally a fork of <https://github.com/seaofclouds/sass-textmate-bundle>, and includes the best contributions of people [throughout the network](https://github.com/nathos/sass-textmate-bundle/network).
 
-### Credit
-This bundle was not created by me. It is a fork of <https://github.com/seaofclouds/sass-textmate-bundle>.
+Features include imprpoved syntax highlighting, [Zen Coding](http://code.google.com/p/zen-coding/)-style property autocompletion, and more.
