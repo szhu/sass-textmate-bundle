@@ -126,9 +126,15 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>:(before|after|first-child|last-child|first-line|first-letter|link|focus|lang|hover|active|visited)</string>
+			<string>:(active|after|before|checked|default|disabled|empty|enabled|first|first-child|first-letter|first-line|first-of-type|focus|hover|in-range|indeterminate|invalid|lang|last-child|last-of-type|left|link|not|nth-child|nth-last-child|nth-last-of-type|nth-of-type|only-child|only-of-type|optional|out-range|read-only|read-write|required|right|root|valid|visited)</string>
 			<key>name</key>
 			<string>entity.other.attribute-name.tag.pseudo-class</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>::(after|before|choices|first-letter|first-line|repeat-index|repeat-item|selection|value)</string>
+			<key>name</key>
+			<string>entity.other.attribute-name.tag.pseudo-element</string>
 		</dict>
 		<dict>
 			<key>match</key>
