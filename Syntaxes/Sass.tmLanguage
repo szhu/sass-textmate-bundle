@@ -155,8 +155,6 @@
 			<key>name</key>
 			<string>support.constant.font-name.sass</string>
 		</dict>
-<<<<<<< HEAD
-=======
 		<!-- Vendor-prefixed properties as reported by http://peter.sh/experiments/vendor-prefixed-css-property-overview/ -->
 		<dict>
 			<key>match</key>
@@ -201,7 +199,6 @@
 			<key>name</key>
 			<string>helper.sublime.property-value.sass</string>
 		</dict>
->>>>>>> 28ecb93... added highlighting for -moz-box-shadow. Fixes #13
 	</array>
 	<key>scopeName</key>
 	<string>source.sass</string>
