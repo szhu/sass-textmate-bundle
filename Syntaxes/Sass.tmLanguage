@@ -126,6 +126,66 @@
 			</array>
 		</dict>
 		<dict>
+			<key>begin</key>
+			<string>image-url\(</string>
+			<key>end</key>
+			<string>\)</string>
+			<key>name</key>
+			<string>variable.parameter.url</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#nested-parens</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>stylesheet-url\(</string>
+			<key>end</key>
+			<string>\)</string>
+			<key>name</key>
+			<string>variable.parameter.url</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#nested-parens</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>font-url\(</string>
+			<key>end</key>
+			<string>\)</string>
+			<key>name</key>
+			<string>variable.parameter.url</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#nested-parens</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>generated-image-url\(</string>
+			<key>end</key>
+			<string>\)</string>
+			<key>name</key>
+			<string>variable.parameter.url</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#nested-parens</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
 			<key>match</key>
 			<string>&amp;</string>
 			<key>name</key>
