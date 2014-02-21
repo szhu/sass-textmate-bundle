@@ -193,13 +193,13 @@
 			<key>begin</key>
 			<string>/\*</string>
 			<key>end</key>
-			<string>$\n?</string>
+			<string>\*/</string>
 			<key>name</key>
-			<string>comment.line.slash-asterisk.sass</string>
+			<string>comment.block.sass</string>
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(^|^\s+)//</string>
+			<string>^\s+//</string>
 			<key>end</key>
 			<string>$\n?</string>
 			<key>name</key>
